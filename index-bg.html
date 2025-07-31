@@ -6,6 +6,20 @@
   <title>Amigurumi Чудеса</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap">
   <style>
+    #bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
@@ -82,16 +96,7 @@
       border-radius: 5px;
       cursor: pointer;
     }
-  </style>#bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
+  </style>
 </head>
 <body>
   <video autoplay muted loop playsinline id="bg-video">
