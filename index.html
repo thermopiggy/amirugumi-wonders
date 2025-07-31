@@ -1,58 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amigurumi Wonders</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap">
   <style>
     body {
-      font-family: sans-serif;
-      background: #fff9f5;
       margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff9f5;
+      color: #444;
+    }
+    header {
+      background-color: #ffb6b9;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      color: white;
+    }
+    nav {
+      background-color: #ffe0e6;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a, nav button {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1559056199-641a0ac8b5cc?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2em;
+      text-shadow: 2px 2px 5px #000;
+    }
+    .container {
       padding: 20px;
     }
-    h1 {
-      text-align: center;
-      color: #ff6f91;
-    }
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 20px;
     }
     .product {
       background: white;
-      padding: 15px;
       border-radius: 10px;
+      padding: 15px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      width: 200px;
       text-align: center;
     }
-    img {
+    .product img {
       width: 100%;
+      height: 150px;
+      object-fit: cover;
       border-radius: 8px;
+    }
+    footer {
+      background-color: #ffb6b9;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <h1>Amigurumi Wonders</h1>
-  <div class="grid">
-    <div class="product">
-      <img src="luna.png" alt="Luna the Mouse" />
-      <h3>Luna the Mouse</h3>
-      <p>Joyful pink mouse who loves strawberries!</p>
-    </div>
-    <div class="product">
-      <img src="boris.png" alt="Boris the Bear" />
-      <h3>Boris the Bear</h3>
-      <p>Cuddly bear guarding your dreams.</p>
-    </div>
-    <div class="product">
-      <img src="boris-big.png" alt="Boris but Bigger" />
-      <h3>Boris but Bigger</h3>
-      <p>Extra huggable version of Boris.</p>
+  <header>
+    <h1>Amigurumi Wonders</h1>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <button onclick="window.location.href='index-bg.html'">Български</button>
+  </nav>
+  <div class="hero">
+    Handmade Cute & Cuddly Friends
+  </div>
+  <div class="container" id="shop">
+    <h2>Our Creations</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="luna.png" alt="Luna the Mouse">
+        <h3>Luna the Mouse</h3>
+        <p>Luna is a curious pink mouse who loves strawberries and bedtime stories. She brings joy to every shelf!</p>
+        <p><strong>€18.00</strong></p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="boris.png" alt="Boris the Bear">
+        <h3>Boris the Bear</h3>
+        <p>Brave and cuddly, Boris guards your dreams and loves warm hugs. Perfect for kids and grown-up hearts.</p>
+        <p><strong>€22.00</strong></p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="boris-big.png" alt="Boris but Bigger">
+        <h3>Boris but Bigger</h3>
+        <p>A larger and darker version of Boris. This guardian bear is built for extra cuddles and even more protection at bedtime.</p>
+        <p><strong>€32.00</strong></p>
+        <button>Add to Cart</button>
+      </div>
     </div>
   </div>
+  <div class="container" id="about">
+    <h2>About Us</h2>
+    <p>We create handmade amigurumi plushies with love and care. Every item is crafted with attention to detail and lots of heart. Whether you're shopping for yourself or a gift, you'll find something unique here.</p>
+  </div>
+  <div class="container" id="contact">
+    <h2>Contact</h2>
+    <p>Want to get in touch? Email us at <a href="mailto:hello@amigurumiwonders.com">hello@amigurumiwonders.com</a>.</p>
+  </div>
+  <footer>
+    <p>&copy; 2025 Amigurumi Wonders. All rights reserved.</p>
+  </footer>
 </body>
 </html>
