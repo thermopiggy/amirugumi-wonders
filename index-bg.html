@@ -231,5 +231,21 @@
     });
   });
 </script>
+  <script>
+  const cart = [];
+
+  document.querySelectorAll('.product button').forEach(button => {
+    button.addEventListener('click', (e) => {
+      const product = e.target.closest('.product');
+      const title = product.querySelector('h3').innerText;
+      const price = product.querySelector('strong').innerText;
+
+      cart.push({ title, price });
+      alert(`✅ ${title} беше добавен в количката за ${price}.`);
+      console.log("Текуща количка:", cart);
+    });
+  });
+</script>
+
 </body>
 </html>
