@@ -232,21 +232,7 @@
     });
   });
 </script>
-  <script>
-  const cart = [];
-
-  document.querySelectorAll('.product button').forEach(button => {
-    button.addEventListener('click', (e) => {
-      const product = e.target.closest('.product');
-      const title = product.querySelector('h3').innerText;
-      const price = product.querySelector('strong').innerText;
-
-      cart.push({ title, price });
-      alert(`✅ ${title} беше добавен в количката за ${price}.`);
-      console.log("Текуща количка:", cart);
-    });
-  });
-</script>
+  
 
 
 <div id="cart-modal" style="display:none; position:fixed; top:10%; left:50%; transform:translateX(-50%);
