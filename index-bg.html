@@ -131,16 +131,7 @@
   <img id="lightbox-img" src="" alt="Full Image">
 </div>
 
-<script>
-  document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('click', () => {
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImg = document.getElementById('lightbox-img');
-      lightboxImg.src = img.src;
-      lightbox.style.display = 'flex';
-    });
-  });
-</script>
+
 
 <body>
   <div class="animated-bg"></div>
@@ -227,5 +218,16 @@
   <footer>
     <p>&copy; 2025 Amigurumi Чудеса. Всички права запазени.</p>
   </footer>
+  
+  <script>
+  document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('click', () => {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    });
+  });
+</script>
 </body>
 </html>
