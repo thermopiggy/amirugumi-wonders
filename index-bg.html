@@ -143,6 +143,24 @@
         0 0 25px #ff6f91;
     }
 
+         .pulse-title {
+      margin: 0;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 900;
+      font-size: 8vw;
+      color: white;
+      animation: pulse-glow 2.5s ease-in-out infinite;
+      transition: transform 0.3s ease;
+      text-align: center;
+      padding: 0 5vw;
+      word-wrap: break-word;
+    }
+    
+    @keyframes pulse-glow {
+      0% { text-shadow: 0 0 5px #ffccd5, 0 0 10px #ffb6c1, 0 0 15px #ff99aa, 0 0 25px #ff6f91; transform: scale(1); }
+      50% { text-shadow: 0 0 10px #ffe0e6, 0 0 20px #ffb6c1, 0 0 30px #ff99aa, 0 0 40px #ff6f91; transform: scale(1.05); }
+      100% { text-shadow: 0 0 5px #ffccd5, 0 0 10px #ffb6c1, 0 0 15px #ff99aa, 0 0 25px #ff6f91; transform: scale(1); }
+    }
 
 
 
