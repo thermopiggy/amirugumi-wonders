@@ -258,7 +258,8 @@
         <p>Кооой каза, че демокрация на сила не става? Ма не било точно демокрация!... ше си му викам както си искам!</p>
         <p><strong>Неколко F-16ски</strong></p>
         <button>Добави в количката</button> 
-        <button class="chat-button" onclick="openChat('Хузйо Деди')">💬 Я виж тука! </button>
+        <!-- Бутон за отваряне -->
+        <button id="chatToggle" style="position:fixed; bottom:50px; right:20px; z-index:9999;">💬 Говори с Хузйо</button>
    
   </div>
       
@@ -285,8 +286,6 @@
         <button id="sendBtn" style="width:25%; padding:5px;">Изпрати</button>
       </div>
       
-      <!-- Бутон за отваряне -->
-      <button id="chatToggle" style="position:fixed; bottom:50px; right:20px; z-index:9999;">💬 Говори с Хузйо</button>
 <div id="cart-modal" style="display:none; position:fixed; top:10%; left:50%; transform:translateX(-50%);
  background:white; padding:20px; border:2px solid #ccc; border-radius:10px; z-index:10000; max-width:90%;">
   <h2>Твоята количка</h2>
@@ -332,7 +331,7 @@
       lightboxImg.src = img.src;
       lightbox.style.display = 'flex';
     });
-  });
+  }); //
     
   
 }
