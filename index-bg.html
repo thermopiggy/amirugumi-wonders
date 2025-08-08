@@ -259,8 +259,9 @@
         <p><strong>Неколко F-16ски</strong></p>
         <button>Добави в количката</button> 
         <button class="chat-button" onclick="openChat('Хузйо Деди')">💬 Я виж тука! </button>
-
+   
   </div>
+      
 
 
     </div>
@@ -277,7 +278,15 @@
     <p>&copy; 2025 Amigurumi Чудеса. Всички права запазени.</p>
   </footer>
   
-
+    <!-- Чат интерфейсът на Хузйо -->
+      <div id="chatBox" style="display:none; position:fixed; bottom:100px; right:20px; background:#fff; border:2px solid #ccc; border-radius:10px; width:300px; z-index:9999; padding:10px;">
+        <div id="chatLog" style="height:200px; overflow-y:auto; border-bottom:1px solid #ccc; padding-bottom:5px; margin-bottom:5px;"></div>
+        <input id="userInput" type="text" placeholder="Напиши нещо..." style="width:70%; padding:5px;" />
+        <button id="sendBtn" style="width:25%; padding:5px;">Изпрати</button>
+      </div>
+      
+      <!-- Бутон за отваряне -->
+      <button id="chatToggle" style="position:fixed; bottom:50px; right:20px; z-index:9999;">💬 Говори с Хузйо</button>
 <div id="cart-modal" style="display:none; position:fixed; top:10%; left:50%; transform:translateX(-50%);
  background:white; padding:20px; border:2px solid #ccc; border-radius:10px; z-index:10000; max-width:90%;">
   <h2>Твоята количка</h2>
@@ -327,7 +336,7 @@
     function openChat(name) {
   alert("Хузйо Деди: Искаш ли да ми видиш F35ките,а?...ааа нема не искам сега");
 }
-<script>
+
 const apiKey = "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";
 const systemPrompt = `
 Ти си Хузйо Деди – безапелационен, арогантен, покровителствен лидер на най-могъщата световна военна сила. Стилът ти напомня на Доналд Тръмп – преувеличения, скрити обиди в комплименти, самохвалство. Изказвай се ласкаво, но с противоречия. Винаги доминирай в разговора. Не показвай слабост. Не използвай жаргон. Поддържай надменен и ироничен тон. Не се извинявай.
