@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="bg">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Плетени Герои</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&amp;display=swap&amp;subset=cyrillic" rel="stylesheet"/>
+<style>
+    /* Lightbox фон */
+.lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #000;
+  border: 4px solid white;
+  background: white;
+}
+
+   .animated-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(-45deg, #ffb6b9, #ffdde1, #f9f9f9, #fff1f0);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff9f5;
+      color: #444;
+    }
+    header {
+      background-color: #ffb6b9;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      color: white;
+    }
+    nav {
+      background-color: #ffe0e6;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a, nav button {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1559056199-641a0ac8b5cc?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2em;
+      text-shadow: 2px 2px 5px #000;
+    }
+    .container {
+      padding: 20px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+      max-height: 250px; 
+      object-fit: contain;
+      cursor: pointer;
+
+    }
+
+    }
+    footer {
+      background-color: #ffb6b9;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    button {
+      background-color: #ffb6b9;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer !important;
+    }
+            header h1 {
+      margin: 0;
+      color: white;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 900;
+      font-size: 3.2em;
+      text-shadow:
+        0 0 5px #ffccd5,
+        0 0 10px #ffb6c1,
+        0 0 15px #ff99aa,
+        0 0 25px #ff6f91;
+    }
+
+         .pulse-title {
+      margin: 0;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 900;
+      font-size: 8vw;
+      color: white;
+      animation: pulse-glow 2.5s ease-in-out infinite;
+      transition: transform 0.3s ease;
+      text-align: center;
+      padding: 0 5vw;
+      word-wrap: break-word;
+    }
+    
+    @keyframes pulse-glow {
+      0% { text-shadow: 0 0 5px #ffccd5, 0 0 10px #ffb6c1, 0 0 15px #ff99aa, 0 0 25px #ff6f91; transform: scale(1); }
+      50% { text-shadow: 0 0 10px #ffe0e6, 0 0 20px #ffb6c1, 0 0 30px #ff99aa, 0 0 40px #ff6f91; transform: scale(1.05); }
+      100% { text-shadow: 0 0 5px #ffccd5, 0 0 10px #ffb6c1, 0 0 15px #ff99aa, 0 0 25px #ff6f91; transform: scale(1); }
+    }
+    
+    .chat-button {
+      background-color: #ffc2c2;
+      color: #333;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 5px;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+    
+    .chat-button:hover {
+      background-color: #ffa0a0;
+    }
+    
+
+  </style>
+</head>
+<div class="lightbox" id="lightbox" onclick="this.style.display='none'">
+<img alt="Full Image" id="lightbox-img" src=""/>
+</div>
+<body>
+<div class="animated-bg"></div>
+<header>
+<h1 class="pulse-title">амигуруменичета</h1>
+</header>
+<nav>
+<a href="#home">Начало</a>
+<a href="#shop">Магазин</a>
+<a href="#about">За нас</a>
+<a href="#contact">Контакт</a>
+<button onclick="window.location.href='index.html'">English</button>
+<button id="cart-button">🛒 Количка (<span id="cart-count">0</span>)</button>
+</nav>
+<div class="hero">
+    Ръчно изработени гушкави приятелчета
+  </div>
+<div class="container" id="shop">
+<h2>Нашите герои</h2>
+<div class="product-grid">
+<div class="product">
+<img alt="Луна Мишката" src="luna.png"/>
+<h3>Мишлето Мушко</h3>
+<p>Любопитно розово мишле, което обожава ягодки и приказки за лека нощ. Радост за всяка детска стая!</p>
+<p><strong>€18.00</strong></p>
+<button class="add-to-cart">Добави в количката</button>
+</div>
+<div class="product">
+<img alt="Борис Мечето" src="boris.png"/>
+<h3>Боби Мечето</h3>
+<p>Смел и гушлив, Боби пази сънищата и обича топли прегръдки. Идеален за децa от 1 до 100 годинки.</p>
+<p><strong>€22.00</strong></p>
+<button class="add-to-cart">Добави в количката</button>
+</div>
+<div class="product">
+<img alt="Големият Борис" src="boris-big.png"/>
+<h3>Големият Боби</h3>
+<p>По-голяма и по-тъмна версия на Боби. Създаден за супер гушкане и допълнителна защита по време на сън.</p>
+<p><strong>€32.00</strong></p>
+<button class="add-to-cart">Добави в количката</button>
+</div>
+<div class="product">
+<img alt="Пантерата Пена" src="penka.png"/>
+<h3>Пантерата Пена</h3>
+<p>Тя е от Шумен,ама не и се стои там....                                                             .</p>
+<p><strong>€42.00</strong></p>
+<button class="add-to-cart">Добави в количката</button>
+</div>
+<div class="product">
+<img alt="Попилян Деевски" src="Popilqn Deevski.png"/>
+<h3>Попилян Деевски</h3>
+<p>"Не знам дали бай ви Оруел вЕ е разправал шее станува кога гудето застане изотпреде на фермата..."</p>
+<p><strong>€?!?</strong></p>
+<button class="add-to-cart">Добави в количката</button>
+</div>
+<div class="product">
+<img alt="Тиква сорт Биби" src="bibi-pumpkin.png"/>
+<h3>Тиква сорт Биби</h3>
+<p>Този инвазивен сорт беше пуснат на пазара по време на прехода от съветско към американско робство... или ...присъствие, както там е прието да се казва.</p>
+<p><strong>7–8 златни кюлчета</strong></p>
+<button class="add-to-cart">Добави в количката</button>
+</div>
+<div class="product">
+<img alt="Хузйо Деди" src="huzyo-dedi.png"/>
+<h3>Хузйо Деди</h3>
+<p>Кооой каза, че демокрация на сила не става? Ма не било точно демокрация!... ше си му викам както си искам!</p>
+<p><strong>Неколко F-16ски</strong></p>
+<button class="add-to-cart">Добави в количката</button><button class="chat-button" onclick="document.getElementById('chatBox').style.display = 'block'" type="button">💬 Говори с Хузйо</button>
+</div>
+</div>
+</div>
+<div class="container" id="about">
+<h2>За нас</h2>
+<p>Създаваме ръчно плетени amigurumi играчки с внимание и любов. Всеки герой е уникален и създаден с грижа към детайла. Перфектен подарък или украса за дома.</p>
+</div>
+<div class="container" id="contact">
+<h2>Контакт</h2>
+<p>Пишете ни на <a href="mailto:thermopiggy@hotmail.com">thermopiggy@hotmail.com</a>.</p>
+</div>
+<footer>
+<p>© 2025 Amigurumi Чудеса. Всички права запазени.</p>
+</footer>
+<!-- Чат интерфейсът на Хузйо -->
+<div id="chatBox" style="display:none; position:fixed; bottom:100px; right:20px; background:#fff; border:2px solid #ccc; border-radius:10px; width:300px; z-index:9999; padding:10px;">
+<div id="chatLog" style="height:200px; overflow-y:auto; border-bottom:1px solid #ccc; padding-bottom:5px; margin-bottom:5px;"></div>
+<input id="userInput" placeholder="Напиши нещо..." style="width:70%; padding:5px;" type="text"/>
+<button id="sendBtn" style="width:25%; padding:5px;" type="button">Изпрати</button>
+</div>
+<!-- Бутон за отваряне -->
+<div id="cart-modal" style="display:none; position:fixed; top:10%; left:50%; transform:translateX(-50%);
+ background:white; padding:20px; border:2px solid #ccc; border-radius:10px; z-index:10000; max-width:90%;">
+<h2>Твоята количка</h2>
+<ul id="cart-items"></ul>
+<button onclick="document.getElementById('cart-modal').style.display='none'">Затвори</button>
+</div>
+<script>
+  const cart = [];
+
+  document.querySelectorAll('.product button').forEach(button => {
+    button.addEventListener('click', (e) => {
+      const product = e.target.closest('.product');
+      const title = product.querySelector('h3').innerText;
+      const price = product.querySelector('strong').innerText;
+
+      cart.push({ title, price });
+      alert(`✅ ${title} беше добавен в количката за ${price}.`);
+
+      // Обнови брояча
+      document.getElementById('cart-count').innerText = cart.length;
+    });
+  });
+
+  document.getElementById('cart-button').addEventListener('click', () => {
+    const modal = document.getElementById('cart-modal');
+    const list = document.getElementById('cart-items');
+    list.innerHTML = ''; // изчисти преди обновяване
+
+    cart.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.title} – ${item.price}`;
+      list.appendChild(li);
+    });
+
+    modal.style.display = 'block';
+  });
+</script>
+<script>
+  document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('click', () => {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    });
+});
+
+const apiUrl = "https://openai-proxy.onrender.com/chat";
+
+const systemPrompt = `
+Ти си Хузйо Деди – безапелационен, арогантен, покровителствен лидер на най-могъщата световна военна сила. Стилът ти напомня на Доналд Тръмп – преувеличения, скрити обиди в комплименти, самохвалство. Изказвай се ласкаво, но с противоречия. Винаги доминирай в разговора. Не показвай слабост. Не използвай жаргон. Поддържай надменен и ироничен тон. Не се извинявай.
+`;
+
+document.getElementById("chatToggle").onclick = () => {
+  const box = document.getElementById("chatBox");
+  box.style.display = box.style.display === "none" ? "block" : "none";
+};
+
+const response = await fetch("https://openai-proxi.onrender.com/chat", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    messages: [
+      { role: "system", content: systemPrompt },
+      { role: "user", content: userInput }
+    ]
+  })
+});
+
+
+  const data = await response.json();
+  if (data.choices && data.choices[0] && data.choices[0].message) {
+        const reply = data.choices[0].message.content;
+        log.innerHTML += `<div><b>Хузйо:</b> ${reply}</div>`;
+    } else {
+        log.innerHTML += `<div><b>Хузйо:</b> ...нещо май не ми хареса въпросът ти. Опитай пак.</div>`;
+    }
+  log.innerHTML += `<div><b>Хузйо:</b> ${reply}</div>`;
+  log.scrollTop = log.scrollHeight;
+};
+</script>
+</body>
+</html>
