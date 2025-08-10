@@ -11,13 +11,14 @@
       background: black;
       overflow: hidden;
     }
-    .video-container {
+    .image-container {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      object-fit: cover;
+      background: url('huzyo.png') center center no-repeat;
+      background-size: cover;
       z-index: 0;
     }
     .chatling-container {
@@ -30,11 +31,8 @@
 </head>
 <body>
 
-  <!-- ЛУУП ВИДЕО -->
-  <video class="video-container" autoplay muted loop>
-    <source src="huzyovideo.mp4" type="video/mp4">
-    Вашият браузър не поддържа видео таг.
-  </video>
+  <!-- СТАТИЧНО ИЗОБРАЖЕНИЕ -->
+  <div class="image-container"></div>
 
   <!-- CHATLING СКРИПТ -->
   <div class="chatling-container">
