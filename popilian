@@ -17,7 +17,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: url('Popilian Deevski.png') center center no-repeat;
+      background: url('popilian.png') center center no-repeat;
       background-size: cover;
       z-index: 0;
     }
