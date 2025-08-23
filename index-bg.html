@@ -191,6 +191,32 @@ html, body { overflow-x: hidden; }
   cursor: pointer;
   font-size: 14px;
 }
+    nav {
+  background-color: #ffe0e6;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a, nav button {
+  margin: 0 15px;
+}
+
+#cart-button {
+  margin-left: auto; /* избутва количката вдясно */
+}
+nav {
+  background-color: #ffe0e6;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 </style></head>
  <div class="lightbox" id="lightbox" onclick="this.style.display='none'">
 <img alt="Full Image" id="lightbox-img" src=""/>
