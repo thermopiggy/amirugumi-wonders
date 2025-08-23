@@ -233,8 +233,6 @@ nav {
 <button id="cart-button">🛒 (<span id="cart-count">0</span>)</button>
 </nav>
 
-</div>
-
 <div class="container" id="shop">
 <h2>кликни и говори с куклите отдолу</h2>
 <div class="product-grid">
@@ -315,6 +313,18 @@ nav {
 <script>
   const cart = [];
 
+  function renderCartAndOpen() {
+    const modal = document.getElementById('cart-modal');
+    const list  = document.getElementById('cart-items');
+    list.innerHTML = '';
+    cart.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.title} – ${item.price}`;
+      list.appendChild(li);
+    });
+    modal.style.display = 'block';
+  }
+
   document.querySelectorAll('.product button').forEach(button => {
     button.addEventListener('click', (e) => {
       const product = e.target.closest('.product');
@@ -322,38 +332,15 @@ nav {
       const price = product.querySelector('strong').innerText;
 
       cart.push({ title, price });
-   // Обнови списъка в количката
-const list = document.getElementById('cart-items');
-list.innerHTML = '';
-cart.forEach(item => {
-  const li = document.createElement('li');
-  li.textContent = `${item.title} – ${item.price}`;
-  list.appendChild(li);
-});
-
-// Покажи количката
-document.getElementById('cart-modal').style.display = 'block';
-
-
-      // Обнови брояча
       document.getElementById('cart-count').innerText = cart.length;
+
+      renderCartAndOpen(); // 👉 отваря директно количката
     });
   });
 
-  document.getElementById('cart-button').addEventListener('click', () => {
-    const modal = document.getElementById('cart-modal');
-    const list = document.getElementById('cart-items');
-    list.innerHTML = ''; // изчисти преди обновяване
-
-    cart.forEach(item => {
-      const li = document.createElement('li');
-      li.textContent = `${item.title} – ${item.price}`;
-      list.appendChild(li);
-    });
-
-    modal.style.display = 'block';
-  });
+  document.getElementById('cart-button').addEventListener('click', renderCartAndOpen);
 </script>
+
 <script>
 /* Lightbox */
 document.querySelectorAll('img').forEach(img => {
