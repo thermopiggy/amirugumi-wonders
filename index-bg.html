@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="bg">
 <head>
 <meta charset="utf-8"/>
@@ -7,8 +6,9 @@
 <title>Плетени Герои</title>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&amp;display=swap&amp;subset=cyrillic" rel="stylesheet"/>
+
 <style>
-    /* Lightbox фон */
+/* Lightbox фон */
 .lightbox {
   position: fixed;
   top: 0; left: 0;
@@ -28,7 +28,7 @@
   background: white;
 }
 
-   .animated-bg {
+.animated-bg {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -37,175 +37,31 @@
   animation: gradientAnimation 10s ease infinite;
   z-index: -1;
 }
-
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-
-.hero {
-  position: relative;
-  z-index: 1;
+.hero { position: relative; z-index: 1; }
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fff9f5;
+  color: #444;
 }
-    body {
-      margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      background-color: #fff9f5;
-      color: #444;
-    }
- .header {
+.header {
   text-align: center;
   font-size: 2.7em;
   color: rgba(255,255,255,0.7);
-  margin-top: 2px;
-  font-weight: bold;
-  padding: 0 10px;
-  word-wrap: break-word;
+  margin-top: 2px; font-weight: bold; padding: 0 10px; word-wrap: break-word;
 }
-
 @media (max-width: 768px) {
-  .header {
-    font-size: 1.6em;
-    margin-top: 5px;
-    padding: 0 5px;
-  }
+  .header { font-size: 1.6em; margin-top: 5px; padding: 0 5px; }
 }
 
-    header h1 {
-      margin: 0;
-      color: white;
-    }
-    nav {
-      background-color: #ffe0e6;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a, nav button {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 1em;
-    }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1559056199-641a0ac8b5cc?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 2em;
-      text-shadow: 2px 2px 5px #000;
-    }
-    .container {
-      padding: 20px;
-    }
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 20px;
-    }
-    .product {
-      background: white;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .product img {
-      width: 100%;
-      height: auto;
-      max-height: 250px; 
-      object-fit: contain;
-      cursor: pointer;
+header h1 { margin: 0; color: white; }
 
-    }
-
-    }
-    footer {
-      background-color: #ffb6b9;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    button {
-      background-color: #ffb6b9;
-      color: white;
-      padding: 8px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer !important;
-    }
-            header h1 {
-      margin: 0;
-      color: white;
-      font-family: 'Rubik', sans-serif;
-      font-weight: 900;
-      font-size: 3.2em;
-      text-shadow:
-        0 0 5px #ffccd5,
-        0 0 10px #ffb6c1,
-        0 0 15px #ff99aa,
-        0 0 25px #ff6f91;
-    }
-
-         .pulse-title {
-      margin: 0;
-      font-family: 'Rubik', sans-serif;
-      font-weight: 900;
-      font-size: 8vw;
-      color: white;
-      animation: pulse-glow 2.5s ease-in-out infinite;
-      transition: transform 0.3s ease;
-      text-align: center;
-      padding: 0 5vw;
-      word-wrap: break-word;
-    }
-    
-    @keyframes pulse-glow {
-      0% { text-shadow: 0 0 5px #ffccd5, 0 0 10px #ffb6c1, 0 0 15px #ff99aa, 0 0 25px #ff6f91; transform: scale(1); }
-      50% { text-shadow: 0 0 10px #ffe0е6, 0 0 20px #ffb6c1, 0 0 30px #ff99aa, 0 0 40px #ff6f91; transform: scale(1.05); }
-      100% { text-shadow: 0 0 5px #ffccd5, 0 0 10px #ffb6c1, 0 0 15px #ff99aa, 0 0 25px #ff6f91; transform: scale(1); }
-    }.chat-button:hover {
-      background-color: #ffa0a0;
-    }
-    
-
-  
-html, body { overflow-x: hidden; }
-</style>
-<style>
-#chtl-launcher { display: none !important; }
-.custom-chat-btn {
-  margin-top: 10px;
-  background: black;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 14px;
-}
-    nav {
-  background-color: #ffe0e6;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav a, nav button {
-  margin: 0 15px;
-}
-
-#cart-button {
-  margin-left: auto; /* избутва количката вдясно */
-}
 nav {
   background-color: #ffe0e6;
   padding: 10px;
@@ -216,139 +72,278 @@ nav {
   top: 0;
   z-index: 1000;
 }
+nav a, nav button {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
 
-</style></head>
+/* ====== ПАДАЩА КОЛИЧКА ПОД БУТОНА (НОВО: 20 реда) ====== */
+.cart-wrap {               /* контейнер за бутона + падащото меню */
+  margin-left: auto;
+  position: relative;
+}
+#cart-button {             /* махаме auto от бутона, той е в .cart-wrap */
+  margin-left: 0;
+}
+#cart-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);   /* точно под бутона */
+  right: 0;                /* изравнен по дясната му страна */
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 14px 16px 12px 16px;
+  width: min(360px, 90vw);
+  max-height: 60vh;
+  overflow: auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  display: none;           /* скрит по подразбиране */
+  z-index: 2000;           /* над навбара */
+}
+#cart-dropdown.open { display: block; }
+#cart-dropdown h2 { margin: 0 0 10px 0; font-size: 1.1em; }
+#cart-dropdown .close-x {
+  position: absolute; top: 8px; right: 10px;
+  background: none; border: none; font-size: 18px; cursor: pointer;
+}
+#cart-items { padding-left: 20px; margin: 0; }
+#cart-items li { margin: 6px 0; }
+
+/* ======================================================== */
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1559056199-641a0ac8b5cc?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  height: 300px;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 2em; text-shadow: 2px 2px 5px #000;
+}
+.container { padding: 20px; }
+.product-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;
+}
+.product {
+  background: white; border-radius: 10px; padding: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;
+}
+.product img {
+  width: 100%; height: auto; max-height: 250px; object-fit: contain; cursor: pointer;
+}
+
+footer {
+  background-color: #ffb6b9; color: white; text-align: center; padding: 20px; margin-top: 40px;
+}
+button {
+  background-color: #ffb6b9; color: white; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer !important;
+}
+
+header h1 {
+  margin: 0; color: white; font-family: 'Rubik', sans-serif; font-weight: 900; font-size: 3.2em;
+  text-shadow:
+    0 0 5px #ffccd5, 0 0 10px #ffb6c1, 0 0 15px #ff99aa, 0 0 25px #ff6f91;
+}
+.pulse-title {
+  margin: 0; font-family: 'Rubik', sans-serif; font-weight: 900; font-size: 8vw; color: white;
+  animation: pulse-glow 2.5s ease-in-out infinite; transition: transform 0.3s ease; text-align: center; padding: 0 5vw; word-wrap: break-word;
+}
+@keyframes pulse-glow {
+  0% { text-shadow: 0 0 5px #ffccd5, 0 0 10px #ffb6c1, 0 0 15px #ff99aa, 0 0 25px #ff6f91; transform: scale(1); }
+  50% { text-shadow: 0 0 10px #ffe0e6, 0 0 20px #ffb6c1, 0 0 30px #ff99aa, 0 0 40px #ff6f91; transform: scale(1.05); }
+  100% { text-shadow: 0 0 5px #ffccd5, 0 0 10px #ffb6c1, 0 0 15px #ff99aa, 0 0 25px #ff6f91; transform: scale(1); }
+}
+.chat-button:hover { background-color: #ffa0a0; }
+html, body { overflow-x: hidden; }
+#chtl-launcher { display: none !important; }
+.custom-chat-btn {
+  margin-top: 10px; background: black; color: white; padding: 6px 12px; border-radius: 20px; cursor: pointer; font-size: 14px;
+}
+</style>
+</head>
+
 <body>
-<!-- Lightbox (inside <body>) -->
+<!-- Lightbox (вътре в body) -->
 <div class="lightbox" id="lightbox" onclick="this.style.display='none'">
   <img id="lightbox-img" src="" alt="Full Image"/>
 </div>
+
 <div class="animated-bg"></div>
 <header>
-<h1 class="pulse-title">амигуруменичета</h1>
+  <h1 class="pulse-title">амигуруменичета</h1>
 </header>
+
 <nav>
-<a href="#shop">Магазин</a>
-<a href="#contact">Контакт</a>
-<button onclick="window.location.href='index.html'">English</button>
-<button id="cart-button">🛒 (<span id="cart-count">0</span>)</button>
+  <a href="#shop">Магазин</a>
+  <a href="#contact">Контакт</a>
+  <button onclick="window.location.href='index.html'">English</button>
+
+  <!-- ===== Карта + падащо меню (НОВО: 9 реда) ===== -->
+  <span class="cart-wrap">
+    <button id="cart-button">🛒 (<span id="cart-count">0</span>)</button>
+    <div id="cart-dropdown" aria-hidden="true">
+      <button class="close-x" id="close-cart" aria-label="Затвори">✖</button>
+      <h2>Твоята количка</h2>
+      <ul id="cart-items"></ul>
+    </div>
+  </span>
+  <!-- =============================================== -->
 </nav>
 
 <div class="container" id="shop">
-<h2>кликни и говори с куклите отдолу</h2>
-<div class="product-grid">
-<div class="product-card" style="display:none;">
-<img alt="Луна Мишката" src="luna.png"/>
-<h3>Мишлето Мушко</h3>
-<p>Любопитно розово мишле, което обожава ягодки и приказки за лека нощ. Радост за всяка детска стая!</p>
-<p><strong>€18.00</strong></p>
-<button class="add-to-cart">Добави в количката</button>
-</div>
-<div class="product-card" style="display:none;">
-<img alt="Борис Мечето" src="boris.png"/>
-<h3>Боби Мечето</h3>
-<p>Смел и гушлив, Боби пази сънищата и обича топли прегръдки. Идеален за децa от 1 до 100 годинки.</p>
-<p><strong>€22.00</strong></p>
-<button class="add-to-cart">Добави в количката</button>
-</div>
-<div class="product-card" style="display:none;">
-<img alt="Големият Борис" src="boris-big.png"/>
-<h3>Големият Боби</h3>
-<p>По-голяма и по-тъмна версия на Боби. Създаден за супер гушкане и допълнителна защита по време на сън.</p>
-<p><strong>€32.00</strong></p>
-<button class="add-to-cart">Добави в количката</button>
-</div>
-<div class="product">
-<img alt="Пантерата Пена" src="penka.png"/>
-<h3>Пантерата Пена</h3>
-<p>Тя е от Шумен,ама не и се стои там....                                                             .</p>
-<p><strong>€42.00</strong></p>
-<button class="add-to-cart">Добави в количката</button>
-</div>
-<div class="product">
-<a href="popilian.html">
-  <img src="popilian.png" alt="Попилян Деевски">
+  <h2>кликни и говори с куклите отдолу</h2>
+  <div class="product-grid">
+    <div class="product-card" style="display:none;">
+      <img alt="Луна Мишката" src="luna.png"/>
+      <h3>Мишлето Мушко</h3>
+      <p>Любопитно розово мишле, което обожава ягодки и приказки за лека нощ. Радост за всяка детска стая!</p>
+      <p><strong>€18.00</strong></p>
+      <button class="add-to-cart">Добави в количката</button>
+    </div>
 
-</a>
-<h3>Попилян Деевски</h3>
-<p>"Каквото пипне - пипка го фаща!"</p>
-<p><strong>€?!?</strong></p>
-<button class="add-to-cart">Добави в количката</button>
+    <div class="product-card" style="display:none;">
+      <img alt="Борис Мечето" src="boris.png"/>
+      <h3>Боби Мечето</h3>
+      <p>Смел и гушлив, Боби пази сънищата и обича топли прегръдки. Идеален за децa от 1 до 100 годинки.</p>
+      <p><strong>€22.00</strong></p>
+      <button class="add-to-cart">Добави в количката</button>
+    </div>
+
+    <div class="product-card" style="display:none;">
+      <img alt="Големият Борис" src="boris-big.png"/>
+      <h3>Големият Боби</h3>
+      <p>По-голяма и по-тъмна версия на Боби. Създаден за супер гушкане и допълнителна защита по време на сън.</p>
+      <p><strong>€32.00</strong></p>
+      <button class="add-to-cart">Добави в количката</button>
+    </div>
+
+    <div class="product">
+      <img alt="Пантерата Пена" src="penka.png"/>
+      <h3>Пантерата Пена</h3>
+      <p>Тя е от Шумен,ама не и се стои там....                                                             .</p>
+      <p><strong>€42.00</strong></p>
+      <button class="add-to-cart">Добави в количката</button>
+    </div>
+
+    <div class="product">
+      <a href="popilian.html"><img src="popilian.png" alt="Попилян Деевски"></a>
+      <h3>Попилян Деевски</h3>
+      <p>"Каквото пипне - пипка го фаща!"</p>
+      <p><strong>€?!?</strong></p>
+      <button class="add-to-cart">Добави в количката</button>
+    </div>
+
+    <div class="product">
+      <img alt="Тиква сорт Биби" src="bibi-pumpkin.png"/>
+      <h3>Тиква сорт Биби</h3>
+      <p>Този инвазивен сорт се вкорени дълбоко  .</p>
+      <p><strong>7–8 златни кюлчета</strong></p>
+      <button class="add-to-cart">Добави в количката</button>
+    </div>
+
+    <div class="product">
+      <a href="huzyo.html"><img alt="Хузйо Деди" src="huzyo-dedi.png"/></a>
+      <h3>Хузйо Деди</h3>
+      <p>Фейк нюуууз,ок? Всеки го знае!</p>
+      <p><strong>Неколко F-16ски</strong></p>
+      <button class="add-to-cart">Добави в количката</button>
+    </div>
+  </div>
 </div>
-<div class="product">
-<img alt="Тиква сорт Биби" src="bibi-pumpkin.png"/>
-<h3>Тиква сорт Биби</h3>
-<p>Този инвазивен сорт се вкорени дълбоко  .</p>
-<p><strong>7–8 златни кюлчета</strong></p>
-<button class="add-to-cart">Добави в количката</button>
-</div>
-<div class="product">
-<a href="huzyo.html">
-    <img alt="Хузйо Деди" src="huzyo-dedi.png"/>
-  </a>
-<h3>Хузйо Деди</h3>
-<p>Фейк нюуууз,ок? Всеки го знае!</p>
-<p><strong>Неколко F-16ски</strong></p>
-<button class="add-to-cart">Добави в количката</button>
-</div>
-</div>
+
 <div class="container" id="about">
-<h2>За нас</h2>
-<p>Създаваме ръчно плетени, персонлизирани играчки със собствен чатбот. Всеки герой е уникален и създаден с грижа към детайла. Перфектен подарък или украса за дома.</p>
+  <h2>За нас</h2>
+  <p>Създаваме ръчно плетени, персонлизирани играчки със собствен чатбот. Всеки герой е уникален и създаден с грижа към детайла. Перфектен подарък или украса за дома.</p>
 </div>
+
 <div class="container" id="contact">
-<h2>Контакт</h2>
-<p>Пишете ни на <a href="mailto:thermopiggy@hotmail.com">thermopiggy@hotmail.com</a>.</p>
+  <h2>Контакт</h2>
+  <p>Пишете ни на <a href="mailto:thermopiggy@hotmail.com">thermopiggy@hotmail.com</a>.</p>
 </div>
+
 <footer>
-<p>© 2025 Amigurumi Чудеса. Всички права запазени.</p>
+  <p>© 2025 Amigurumi Чудеса. Всички права запазени.</p>
 </footer>
-<div id="cart-modal" style="display:none; position:fixed; top:10%; left:50%; transform:translateX(-50%);
- background:white; padding:20px; border:2px solid #ccc; border-radius:10px; z-index:10000; max-width:90%; position:relative;">
-  <button onclick="document.getElementById('cart-modal').style.display='none'"
-          style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:20px; cursor:pointer;">✖</button>
-  <h2>Твоята количка</h2>
-  <ul id="cart-items"></ul>
-</div>
+
+<!-- БЕЛЕЖКА: Старият #cart-modal е премахнат напълно. -->
 
 <script>
-  const cart = [];
+/* ===== Количка – рендър и поведение (НОВ JS БЛОК: ~60 реда) ===== */
+const cart = [];
 
-  function renderCartAndOpen() {
-    const modal = document.getElementById('cart-modal');
-    const list  = document.getElementById('cart-items');
-    list.innerHTML = '';
-    cart.forEach(item => {
-      const li = document.createElement('li');
-      li.textContent = `${item.title} – ${item.price}`;
-      list.appendChild(li);
-    });
-    modal.style.display = 'block';
-  }
+const cartWrap     = document.querySelector('.cart-wrap');
+const cartBtn      = document.getElementById('cart-button');
+const dropdown     = document.getElementById('cart-dropdown');
+const closeCartBtn = document.getElementById('close-cart');
+const itemsList    = document.getElementById('cart-items');
+const counterEl    = document.getElementById('cart-count');
 
-  // Слушаме само бутоните "Добави в количката"
-  document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener('click', (e) => {
-      // Покрива и .product, и .product-card
-      const product = e.target.closest('.product, .product-card');
-      if (!product) return;
-
-      const title = product.querySelector('h3').innerText;
-      const price = product.querySelector('strong').innerText;
-
-      cart.push({ title, price });
-
-      // Обнови брояча
-      const counter = document.getElementById('cart-count');
-      if (counter) counter.innerText = cart.length;
-
-      // Отвори модала
-      renderCartAndOpen();
-    });
+function renderCart() {
+  itemsList.innerHTML = '';
+  cart.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = `${item.title} – ${item.price}`;
+    itemsList.appendChild(li);
   });
+}
 
-  // Клик на иконата на количката също отваря модала
-  document.getElementById('cart-button').addEventListener('click', renderCartAndOpen);
+function openCart() {
+  renderCart();
+  dropdown.classList.add('open');
+  dropdown.setAttribute('aria-hidden', 'false');
+}
+
+function closeCart() {
+  dropdown.classList.remove('open');
+  dropdown.setAttribute('aria-hidden', 'true');
+}
+
+function toggleCart() {
+  if (dropdown.classList.contains('open')) closeCart();
+  else openCart();
+}
+
+// Клик на бутона – отваря/затваря падащото меню
+cartBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  toggleCart();
+});
+
+// Х – затваряне
+closeCartBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  closeCart();
+});
+
+// Клик извън падащото меню – затваря
+document.addEventListener('click', (e) => {
+  if (!cartWrap.contains(e.target)) closeCart();
+});
+
+// ESC – затваряне
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeCart();
+});
+
+// Бутони „Добави в количката“
+document.querySelectorAll('.add-to-cart').forEach(button => {
+  button.addEventListener('click', (e) => {
+    const product = e.target.closest('.product, .product-card');
+    if (!product) return;
+
+    const title = product.querySelector('h3').innerText;
+    const price = product.querySelector('strong').innerText;
+
+    cart.push({ title, price });
+    if (counterEl) counterEl.innerText = cart.length;
+
+    // отваряме директно под бутона
+    openCart();
+  });
+});
+/* ================================================================ */
 </script>
 
 <script>
@@ -375,21 +370,19 @@ document.querySelectorAll('img').forEach(img => {
   const sendBtn = document.getElementById('sendBtn');
   const toggle = document.getElementById('chatToggle');
 
-  // Make sure chat is visible when toggled
   if (toggle) {
     toggle.addEventListener('click', () => {
       box.style.display = (box.style.display === 'none' || !box.style.display) ? 'block' : 'none';
     });
   } else {
-    // If there's no toggle button, show the chat by default
-    box.style.display = 'block';
+    box && (box.style.display = 'block');
   }
 
   function append(role, text) {
     const div = document.createElement('div');
     div.innerHTML = `<b>${role}:</b> ${text}`;
-    log.appendChild(div);
-    log.scrollTop = log.scrollHeight;
+    log && log.appendChild(div);
+    log && (log.scrollTop = log.scrollHeight);
   }
 
   async function send() {
@@ -422,8 +415,8 @@ document.querySelectorAll('img').forEach(img => {
     }
   }
 
-  sendBtn.addEventListener('click', send);
-  input.addEventListener('keydown', (e) => { if (e.key === 'Enter') send(); });
+  sendBtn && sendBtn.addEventListener('click', send);
+  input && input.addEventListener('keydown', (e) => { if (e.key === 'Enter') send(); });
 })();
 </script>
 
