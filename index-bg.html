@@ -325,18 +325,24 @@ nav {
     modal.style.display = 'block';
   }
 
-  document.querySelectorAll('.product button').forEach(button => {
+  document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', (e) => {
-      const product = e.target.closest('.product');
+      // хваща или product, или product-card
+      const product = e.target.closest('.product, .product-card');
+      if (!product) return;
+
       const title = product.querySelector('h3').innerText;
       const price = product.querySelector('strong').innerText;
 
       cart.push({ title, price });
       document.getElementById('cart-count').innerText = cart.length;
 
-      renderCartAndOpen(); // 👉 отваря директно количката
+      renderCartAndOpen();
     });
   });
+
+  document.getElementById('cart-button').addEventListener('click', renderCartAndOpen);
+</script>
 
   document.getElementById('cart-button').addEventListener('click', renderCartAndOpen);
 </script>
