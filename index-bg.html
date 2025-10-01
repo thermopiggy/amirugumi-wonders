@@ -182,8 +182,6 @@ html, body { overflow-x: hidden; }
 
 <body>
 <!-- Lightbox (вътре в body) -->
-<div class="lightbox" id="lightbox" onclick="this.style.display='none'">
-  <img id="lightbox-img" src="" alt="Full Image"/>
   <div class="lightbox" id="lightbox" onclick="this.style.display='none'">
   <img id="lightbox-img" src="" alt="Full Image"/>
   <div id="cat-bubble" style="display:none; position:absolute; bottom:30px; right:30px;
@@ -404,6 +402,7 @@ document.querySelectorAll('img').forEach(img => {
   img.addEventListener('click', () => {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
+    const bubble = document.getElementById('cat-bubble'); 
     lightboxImg.src = img.src;
     lightbox.style.display = 'flex';
      if (img.alt.includes("Пантерата Пена")) {
